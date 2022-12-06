@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #081e30;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.azamat.user_account.controllers.RegController">
+   <children>
+      <Label layoutX="14.0" layoutY="30.0" stylesheets="@../../../Styles/main.css" text="Sign up" textFill="#fffefe">
+         <font>
+            <Font name="Montserrat Thin" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="505.0" layoutY="65.0" styleClass="sign" stylesheets="@../../../Styles/main.css" text="Sign in" textFill="#fffefe">
+         <font>
+            <Font name="Montserrat Thin" size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="reglogin" focusTraversable="false" layoutX="14.0" layoutY="67.0" promptText="Enter your login" styleClass="text-input" stylesheets="@../../../Styles/main.css">
+         <font>
+            <Font name="Montserrat Thin" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="regemail" focusTraversable="false" layoutX="14.0" layoutY="116.0" promptText="Enter your  email" styleClass="text-input" stylesheets="@../../../Styles/main.css">
+         <font>
+            <Font name="Montserrat Thin" size="14.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="regpass" focusTraversable="false" layoutX="14.0" layoutY="166.0" promptText="Enter password" styleClass="text-input" stylesheets="@../../../Styles/main.css">
+         <font>
+            <Font name="Montserrat Thin" size="14.0" />
+         </font>
+      </PasswordField>
+      <CheckBox fx:id="regrights" layoutX="51.0" layoutY="215.0" mnemonicParsing="false" textFill="WHITE">
+         <font>
+            <Font name="Montserrat Thin" size="14.0" />
+         </font>
+         <graphic>
+            <Hyperlink stylesheets="@../../../Styles/main.css" text="User agreement" textFill="WHITE" underline="true">
+               <font>
+                  <Font name="Montserrat Thin" size="14.0" />
+               </font>
+            </Hyperlink>
+         </graphic>
+      </CheckBox>
+      <Label layoutX="249.0" layoutY="16.0" prefHeight="58.0" prefWidth="351.0" text="Do you already have an account?" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="reg_btn" focusTraversable="false" layoutX="70.0" layoutY="248.0" mnemonicParsing="false" stylesheets="@../../../Styles/main.css" text="Sign up" textAlignment="CENTER" textFill="#eeebeb">
+         <font>
+            <Font name="Montserrat Thin" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextField fx:id="authlog" focusTraversable="false" layoutX="378.0" layoutY="97.0" promptText="Enter your login" styleClass="text-input" stylesheets="@../../../Styles/main.css">
+         <font>
+            <Font name="Montserrat Thin" size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="auth_btn" focusTraversable="false" layoutX="385.0" layoutY="196.0" mnemonicParsing="false" stylesheets="@../../../Styles/main.css" text="Sign in" textAlignment="CENTER" textFill="#eeebeb">
+         <font>
+            <Font name="Montserrat Thin" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <PasswordField fx:id="authpass" focusTraversable="false" layoutX="378.0" layoutY="146.0" promptText="Enter password" styleClass="text-input" stylesheets="@../../../Styles/main.css">
+         <font>
+            <Font name="Montserrat Thin" size="14.0" />
+         </font>
+      </PasswordField>
+   </children>
+</AnchorPane>
