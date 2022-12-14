@@ -61,4 +61,18 @@ public class DB {
         }
         return false;
     }
+
+    public ResultSet getCvs(){
+        String sql = "SELECT `position` , `Stack` FROM `cv_s`";
+        Statement statement = null;
+        try {
+            statement = getDbconnection().createStatement();
+            return statement.executeQuery(sql);
+        } catch (SQLException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
 }

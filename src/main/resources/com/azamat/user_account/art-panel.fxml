@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #081e30;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.azamat.user_account.controllers.ArtControllerPanel">
+    <children>
+        <Label layoutX="180.0" layoutY="14.0" styleClass="sign" stylesheets="@../../../Styles/main.css" text="News from the website" textFill="#fffefe">
+            <font>
+                <Font name="Montserrat Thin" size="25.0" />
+            </font>
+        </Label>
+        <Button fx:id="exitbtn" focusTraversable="false" layoutX="497.0" layoutY="14.0" mnemonicParsing="false" stylesheets="@../../../Styles/main.css" text="Sign out" textAlignment="CENTER" textFill="#eeebeb">
+            <font>
+                <Font name="Montserrat Thin" size="14.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+      <ScrollPane focusTraversable="false" layoutY="75.0" prefHeight="325.0" prefWidth="600.0">
+         <content>
+            <HBox fx:id="panelHBox" prefHeight="323.0" prefWidth="601.0" style="-fx-background-color: #BDD3CC;" />
+         </content>
+      </ScrollPane>
+    </children>
+</AnchorPane>

@@ -1,6 +1,9 @@
 package com.azamat.user_account.controllers;
 
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.math.BigInteger;
 import java.net.URL;
 import java.security.MessageDigest;
@@ -9,11 +12,18 @@ import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 import com.azamat.user_account.DB;
+import com.azamat.user_account.HelloApplication;
+import com.azamat.user_account.models.User;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 public class  RegController {
 
@@ -61,15 +71,15 @@ private DB db = new DB();
 
     auth_btn.setOnAction(actionEvent -> {
         try {
-            authUser();
-        } catch (SQLException | ClassNotFoundException e) {
+            authUser(actionEvent);
+        } catch (IOException | SQLException | ClassNotFoundException e) {
             e.printStackTrace();
         }
     });
 
             }
 
-    private void authUser() throws SQLException,ClassNotFoundException {
+    private void authUser(ActionEvent actionEvent) throws SQLException,ClassNotFoundException, IOException {
     String login =  authlog.getCharacters().toString();
     String pass =  authpass.getCharacters().toString();
 
@@ -89,6 +99,15 @@ private DB db = new DB();
         authlog.setText("");
         authpass.setText("");
         auth_btn.setText("You're almost here :)");
+
+        FileOutputStream fos = new FileOutputStream("user.settings");
+        ObjectOutputStream oos = new ObjectOutputStream(fos);
+
+        oos.writeObject(new User(login));
+        oos.close();
+
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        HelloApplication.setScene("art-panel.fxml", stage);
         }
 
     }

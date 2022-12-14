@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="250.0" style="-fx-background-color: #DCDAE0;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="position" layoutX="6.0" layoutY="8.0" prefHeight="62.0" prefWidth="240.0" style="-fx-padding: 0 20;" text="The new article">
+         <font>
+            <Font name="Montserrat Thin" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="stack" alignment="TOP_CENTER" layoutX="5.0" layoutY="66.0" prefHeight="334.0" prefWidth="240.0" style="-fx-padding: 0 5;" text="The new article" wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
