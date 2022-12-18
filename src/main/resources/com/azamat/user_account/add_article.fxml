@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #081e30;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.azamat.user_account.controllers.AddArticleController">
+    <children>
+        <Label layoutX="193.0" layoutY="14.0" stylesheets="@../../../Styles/main.css" text="Adding your own CV" textFill="#fffefe">
+            <font>
+                <Font name="Montserrat Thin" size="25.0" />
+            </font>
+        </Label>
+        <Button focusTraversable="false" layoutX="521.0" layoutY="348.0" mnemonicParsing="false" onAction="#addCv" stylesheets="@../../../Styles/main.css" text="Add" textAlignment="CENTER" textFill="#eeebeb">
+            <font>
+                <Font name="Montserrat Thin" size="14.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Button>
+      <TextField fx:id="position" focusTraversable="false" layoutX="226.0" layoutY="127.0" prefHeight="40.0" prefWidth="371.0" promptText="Position" styleClass="text-input" stylesheets="@../../../Styles/main.css">
+         <font>
+            <Font name="Montserrat Thin" size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="218.0" layoutY="87.0" prefHeight="40.0" prefWidth="388.0" stylesheets="@../../../Styles/main.css" text="What position do you want to apply?" textAlignment="CENTER" textFill="#fffefe">
+         <font>
+            <Font name="Montserrat Thin" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="226.0" layoutY="171.0" stylesheets="@../../../Styles/main.css" text="What stack do you use?" textFill="#fffefe">
+         <font>
+            <Font name="Montserrat Thin" size="25.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="stack_area" layoutX="226.0" layoutY="201.0" prefHeight="142.0" prefWidth="359.0" promptText="Enter your stack" style="-fx-background-color: #081e30;" styleClass="text-input" />
+      <TextArea fx:id="yourself" layoutX="14.0" layoutY="127.0" prefHeight="222.0" prefWidth="200.0" promptText="P.S: You have to add your email " />
+      <Label layoutX="38.0" layoutY="92.0" text="About yourself" textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

@@ -34,7 +34,7 @@ public class ArtControllerPanel {
     private URL location;
 
     @FXML
-    private Button exitbtn;
+    private Button exitbtn, add_artbtn;
 
     @FXML
     void initialize() throws SQLException, IOException {
@@ -65,6 +65,15 @@ public class ArtControllerPanel {
         exitbtn.setOnAction(actionEvent -> {
             try {
                 exitUser(actionEvent);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+
+        add_artbtn.setOnAction(actionEvent -> {
+            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            try {
+                HelloApplication.setScene("add_article.fxml", stage);
             } catch (IOException e) {
                 e.printStackTrace();
             }

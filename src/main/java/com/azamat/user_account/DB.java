@@ -4,8 +4,8 @@ import java.sql.*;
 
 public class DB {
     private String HOST = "localhost";
-    private String PORT = "8889";
-    private String DB_NAME = "azamat_java";
+    private String PORT = "";
+    private String DB_NAME = "azamat";
     private String LOGIN = "root";
     private String PASS = "root";
 
@@ -75,4 +75,19 @@ public class DB {
         return null;
     }
 
+
+    public void addcv(String pos, String yours, String stack) {
+        String sql = "INSERT INTO `cv_s` (`position`, `about_yourself`, `Stack`) VALUES(?, ?, ?)";
+
+        try{
+            PreparedStatement preparedStatement = getDbconnection().prepareStatement(sql);
+            preparedStatement.setString(1, pos);
+            preparedStatement.setString(2, yours);
+            preparedStatement.setString(3, stack);
+
+            preparedStatement.executeUpdate();
+        } catch (SQLException | ClassNotFoundException e){
+            e.printStackTrace();
+        }
+    }
 }

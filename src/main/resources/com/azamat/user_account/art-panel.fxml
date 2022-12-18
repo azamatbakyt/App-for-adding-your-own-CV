@@ -28,5 +28,13 @@
             <HBox fx:id="panelHBox" prefHeight="323.0" prefWidth="601.0" style="-fx-background-color: #BDD3CC;" />
          </content>
       </ScrollPane>
+      <Button fx:id="add_artbtn" focusTraversable="false" layoutX="20.0" layoutY="14.0" mnemonicParsing="false" stylesheets="@../../../Styles/main.css" text="Add CV" textAlignment="CENTER" textFill="#eeebeb">
+         <font>
+            <Font name="Montserrat Thin" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
     </children>
 </AnchorPane>
